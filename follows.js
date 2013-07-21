@@ -111,7 +111,7 @@
 
 								// Fill Datastream UI with Data
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
-								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(434-datastream.current_value);
+								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(434-datastream.current_value) + "cm";
 
 								// Include Datastream Unit (If Available)
 								if(datastream.unit) {
