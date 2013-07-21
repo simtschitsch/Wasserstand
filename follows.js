@@ -81,14 +81,14 @@
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
-					updated = updated.parseISO(datastream.at);
+					updated = updated.parseISO();
 					var diff = null;
 					if(duration == '6hours') diff = 21600000;
 					 if(duration == '1day') diff = 86400000;
 					 if(duration == '1week') diff = 604800000;
 					 if(duration == '1month') diff = 2628000000;
 					 if(duration == '90days') diff = 7884000000;
-					then.setTime(now.getTime() - diff);
+					then.setTime(utcnow.getTime() - diff);
 					if(updated.getTime() > then.getTime()) {
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {
 							xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
