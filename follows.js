@@ -43,7 +43,7 @@
 	Date.prototype.addDays = function (d) {
 		if (d) {
 			var t = this.getTime();
-			t = t + (d * 86400000);
+			t = t+7200000 + (d * 86400000);
 			this.setTime(t);
 		}
 	};
@@ -52,7 +52,7 @@
 	Date.prototype.subtractDays = function (d) {
 		if (d) {
 			var t = this.getTime();
-			t = t - (d * 86400000);
+			t = t+7200000 - (d * 86400000);
 			this.setTime(t);
 		}
 	};
